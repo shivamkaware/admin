@@ -18,7 +18,7 @@ Dashbord
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Total Visitors</p>
-                                            11022
+                                          <h5>  11022 </h5> 
                                         </div>
                                     </div>
                                 </div>

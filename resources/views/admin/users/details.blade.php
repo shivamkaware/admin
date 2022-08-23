@@ -34,12 +34,12 @@ User Order details
 
                                 <tr>
                                     <td>{{@$order->id}}</td>
-                                    <td>{{$order->products[0]->name}}</td>
-                                    <td>{{$order->address}}</td>
-                                    <td>{{$order->OrderItems[0]->quantity}}</td>
-                                    <td>{{$order->OrderItems[0]->price}}</td>
-                                    <td>{{$order->date}}</td>
-                                    <td>@if ($order->status)
+                                    <td>{{@$order->products[0]->name}}</td>
+                                    <td>{{@$order->address}}</td>
+                                    <td>{{@$order->OrderItems[0]->quantity}}</td>
+                                    <td>{{@$order->OrderItems[0]->price}}</td>
+                                    <td>{{@$order->date}}</td>
+                                    <td>@if (@$order->status)
                                         <span class="label label-success">Confirmed</span>
                                         @else
                                         <span class="label label-warning">pending</span>

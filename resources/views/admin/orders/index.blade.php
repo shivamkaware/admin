@@ -67,8 +67,7 @@ Order
                                  <a href="{{route('orders.confirm',$order->id)}}">  <button type="button" class="btn btn-success"> confirm</button></a>
                                     @endif
 
-                                   <a href="{{route('order.detail',$order->id)}}"> <button class="btn btn-sm btn-primary ti-view-list-alt"
-                                            title="Details"></button></a>
+                                   <a href="{{route('order.detail',$order->id)}}"> <button type="button" class="btn btn-info" >Details</button></a>
                                  </td>
                             </tr>
 
