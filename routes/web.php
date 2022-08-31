@@ -80,11 +80,13 @@ Route::get('/user/singin',[LoginController::class,'stored'])->name('user.login')
 
 
 //Register Controller
-Route::get('/user/singup',[RegisterController::class,'singup'])->name('singup');
+Route::get('/user/singup',[RegisterController::class,'singup'])->name('user.singup');
 Route::post('/user/register',[RegisterController::class,'store'])->name('user.register');
 
 //UserprofileController
 Route::get('/user/profile',[UserProfileController::class,'index'])->name('user.profile');
 // Route::get('/user/profile/order',[UserProfileController::class,'index'])->name('user.order');
 Route::get('/user/profile/details',[UserProfileController::class,'show'])->name('user.show');
-Route::get('/user/profile/edit',[UserProfileController::class,'edit'])->name('edit.profile');
+Route::get('/user/profile/edit/',[UserProfileController::class,'edit'])->name('edit.profile');
+Route::post('/user/profile/update/{id}',[UserProfileController::class,'update'])->name('user.update');
+Route::get('/user/order/detail/{id}',[UserProfileController::class,'detail'])->name('userorder.detail');

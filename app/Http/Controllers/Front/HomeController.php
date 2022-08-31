@@ -13,6 +13,9 @@ class HomeController extends Controller
         $product=Product::inRandomOrder()->take(4)->get();
         return view('front.index',compact('product'));
     }
+    public function login(){
+        return view('front.singin');
 
-   
+    }
+
 }

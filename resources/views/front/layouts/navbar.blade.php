@@ -17,8 +17,14 @@
                         <i class="fa fa-user"></i> Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                        <a class="dropdown-item " href="{{route('singin')}}">Sign In</a>
-                        <a class="dropdown-item" href="{{route('singup')}}">Sign Up</a>
+                        @if (!auth()->check())
+                            <a class="dropdown-item " href="{{route('singin') }}">Sign In</a>
+                            <a class="dropdown-item" href="{{route('user.singup') }}">Sign Up</a>
+                        @else
+                            <a class="dropdown-item" href="{{  url('profile') }}"><i class="fa fa-user"></i> Profile</a>
+                            <hr>
+                            <a class="dropdown-item" href="{{  url('logout') }}"><i class="fa fa-lock"></i> Logout</a>
+                        @endif
                     </div>
                 </li>
             </ul>
