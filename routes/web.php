@@ -71,7 +71,11 @@ Route::middleware(['auth'])->group(function () {
  //Cartcontroller
 
  Route::get('/cart/index',[CartController::class,'cartindex'])->name('cart.index');
- Route::Post('/cart/store',[CartController::class,'store'])->name('cart.store');
+ Route::post('/cart/store',[CartController::class,'store'])->name('cart.store');
+ Route::get('/cart/empty',[CartController::class,'empty']);
+Route::get('cart/remove/{id}',[CartController::class,'remove'])->name('cart.remove');
+
+
 
  //loging Controller
 Route::get('/user/login',[LoginController::class,'login'])->name('singin');

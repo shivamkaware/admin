@@ -1,5 +1,6 @@
 @extends('front.layouts.master')
 @section('content')
+
 <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
         <h5 class="display-3"><strong>Welcome,</strong></h5>
@@ -26,7 +27,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <strong>${{$product->price}}</strong> &nbsp;
+                    <strong>₹{{$product->price}}</strong> &nbsp;
                     <form action="{{route('cart.store')}}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{$product->id}}">
